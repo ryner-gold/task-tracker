@@ -19,19 +19,14 @@ public class TaskController {
     private final TaskService taskService = new TaskService ();
 
     public Scene processInput (int option) {
-        try {
-            if (option == 6) {
-                return Scene.QUIT;
-            }
-            if (option < 1 || option > 5) {
-                System.out.println ("Option out of range.");
-                return Scene.MAIN_MENU;
-            }
-            return renderScene (option);
-        } catch (Exception e) {
-            System.out.println ("Error processing input: " + e.getMessage ());
+        if (option == 6) {
+            return Scene.QUIT;
+        }
+        if (option < 1 || option > 5) {
+            System.out.println ("Option out of range.");
             return Scene.MAIN_MENU;
         }
+        return renderScene (option);
     }
 
     private Scene renderScene (int option) {

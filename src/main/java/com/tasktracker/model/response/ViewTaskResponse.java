@@ -4,7 +4,7 @@ import com.tasktracker.model.Task;
 
 import java.util.Optional;
 
-public class ViewTaskResponse {
+public final class ViewTaskResponse {
     private final Task task;
     private final String statusCode;
     private final String message;
@@ -27,7 +27,7 @@ public class ViewTaskResponse {
         return message;
     }
 
-    public static class Builder {
+    public final static class Builder {
         private Task task;
         private String statusCode;
         private String message;

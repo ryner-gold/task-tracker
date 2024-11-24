@@ -2,15 +2,13 @@ package com.tasktracker.model.response;
 
 import com.tasktracker.model.TaskList;
 
-public class CreateTaskResponse extends TaskResponse {
+public final class CreateTaskResponse extends TaskResponse {
 
     private CreateTaskResponse (Builder builder) {
-        super (builder.task,
-               builder.statusCode,
-               builder.message);
+        super (builder.task, builder.statusCode, builder.message);
     }
 
-    public static class Builder {
+    public final static class Builder {
         private TaskList task;
         private String statusCode;
         private String message;
